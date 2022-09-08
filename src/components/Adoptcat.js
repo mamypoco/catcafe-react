@@ -18,7 +18,7 @@ function Adoptcat() {
                         <a href="https://www.seattlehumane.org/">
                            Seattle Humaine Society
                         </a>
-                        , The Cat Coacoa is starting sending cats to good homes.
+                        . The Cat Coacoa is starting sending cats to good homes.
                         We have kittens, adults, and senior cats including
                         special needs cats, who would be missing tails, cats
                         with one eye, blind cats, and cats with other medical

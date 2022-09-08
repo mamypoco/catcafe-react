@@ -28,11 +28,13 @@ class Header extends Component {
       return (
          <React.Fragment>
             <div className="site-header">
-               <div className="container-fluid py-5">
+               <div className="container-fluid py-3">
                   <div className="row">
                      <div className="col">
                         <img
                            src={cafeLogo}
+                           height="140"
+                           width="300"
                            alt="A house with door, paw print and a coffee cup"
                         />
                      </div>

@@ -5,7 +5,7 @@ function Home() {
    return (
       <div className="container">
          <div className="row row-content">
-            <div className="col">
+            <div className="col text-center">
                <h1 className="header">Seattle Eastsides' first cat cafe</h1>
                <img
                   src={HomeImg}
@@ -32,7 +32,7 @@ function Home() {
                <p>
                   The cat lounge fee is $7.00 up to hour and the capacity is 7.
                   Walk-in is always welcome without reservation. For ordering
-                  drink and foo menu only, you do not need to book a visit.When
+                  drink and foo menu only, you do not need to book a visit. When
                   under 7 people in the laonge, feel free to come in to the
                   laounge. If you want to reserve the spot in advance, please
                   book a visit via the button to make sure you are in.{" "}

@@ -5,7 +5,7 @@ import MissionImg from "../assets/girl_holding.jpg";
 function About() {
    return (
       <div className="container">
-         <div className="row row-content text-center">
+         <div className="row row-content">
             <div className="col">
                <h1 className="header">About Cat Cocoa</h1>
                <div className="media row-row-conent">

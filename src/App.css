@@ -1,34 +1,32 @@
 .site-footer {
    background: black;
    color: white;
-   padding: 20px 0;
-}
-
-.App {
-   text-align: center;
+   padding: 10px 0;
 }
 
 .site-header {
-   margin: 200;
-   padding: 30px;
+   margin: 0;
+   padding: 5px;
    background-image: linear-gradient(to right, #e6ddc4, #d4ac2b, #533535);
    color: white;
+   text-align: center;
 }
 .NavLink {
    text-decoration: none;
 }
 
 .header {
+   text-align: center;
    margin-bottom: 40px;
 }
 
 .row-content {
-   padding: 5% 10%;
-   margin: 0;
+   padding: 2% 9%;
+   margin-top: 0;
 }
 
 Nav {
-   font-size: 20px;
+   font-size: 22px;
 }
 /* .App-header {
    background-color: #282c34;
@@ -40,3 +38,7 @@ Nav {
    font-size: calc(10px + 2vmin);
    color: white;
 } */
+
+p {
+   font-size: 18px;
+}
