@@ -12,24 +12,21 @@ class Contact extends Component {
          newsLetter: false,
          phone: "",
          feedback: "",
-         touched: {
-            firstName: false,
-            lastName: false,
-            phoneNum: false,
-            email: false,
-         },
       };
+      this.baseState = this.state;
    }
    handleChange = (event) => {
-      //you can do like handleChange(event) {, but will need to bind this.
+      //you can do handleChange(event) {, but will need to bind this.
       console.log(event.target.value);
       this.setState({ [event.target.name]: event.target.value });
    };
 
    handleSubmit = (event) => {
       event.preventDefault();
+      //stopping a browser reload/refresh
       console.log("onsubmit event being fired");
-      this.setState({ [event.target.name]: "" });
+      this.setState(this.baseState);
+      //reset form
    };
 
    render() {
