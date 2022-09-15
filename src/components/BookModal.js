@@ -15,6 +15,7 @@ import {
 class BookModal extends Component {
    constructor(props) {
       super(props);
+
       this.state = {
          isModalOpen: false,
          firstName: "",
@@ -22,11 +23,13 @@ class BookModal extends Component {
          email: "",
          numPeople: "",
          date: "",
-         time: "",
+         timeFrom: "",
+         timeTo: "",
       };
       this.baseState = this.state;
       this.toggleModal = this.toggleModal.bind(this);
       this.handleChange = this.handleChange.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
    }
    toggleModal() {
       this.setState({
@@ -36,15 +39,18 @@ class BookModal extends Component {
 
    handleChange(event) {
       console.log(event.target.value);
-      this.setState({ value: event.target.value });
+      this.setState({ [event.target.name]: event.target.value });
    }
 
    handleSubmit(event) {
+      event.preventDefault();
       console.log("Reservation is submitted");
-      this.setState(this.baseState);
+      this.setState(this.state);
    }
 
    render() {
+      const { firstName, lastName, email, numPeople, date, timeFrom, timeTo } =
+         this.state;
       return (
          <React.Fragment>
             <div className="row row-content text-center">
@@ -74,6 +80,7 @@ class BookModal extends Component {
                                  type="text"
                                  name="firstName"
                                  id="firstName"
+                                 value={firstName}
                                  onChange={this.handleChange}
                                  placeholder="First name"
                               />
@@ -83,6 +90,7 @@ class BookModal extends Component {
                                  type="text"
                                  name="lastName"
                                  id="lastName"
+                                 value={lastName}
                                  onChange={this.handleChange}
                                  placeholder="Last Name"
                               />
@@ -99,6 +107,7 @@ class BookModal extends Component {
                                  type="email"
                                  name="email"
                                  id="email"
+                                 value={email}
                                  onChange={this.handleChange}
                               />
                            </Col>
@@ -113,6 +122,7 @@ class BookModal extends Component {
                               type="number"
                               name="numPeople"
                               id="numPeople"
+                              value={numPeople}
                               onChange={this.handleChange}
                               md={4}
                            >
@@ -129,7 +139,6 @@ class BookModal extends Component {
                            </select>
                         </Row>
                      </FormGroup>
-
                      <FormGroup>
                         <Row>
                            <Label htmlFor="date" md={6}>
@@ -140,6 +149,7 @@ class BookModal extends Component {
                                  type="date"
                                  name="date"
                                  id="date"
+                                 value={date}
                                  onChange={this.handleChange}
                               />
                            </Col>
@@ -147,23 +157,40 @@ class BookModal extends Component {
                      </FormGroup>
                      <FormGroup>
                         <Row>
-                           <Label htmlFor="time" md={6}>
-                              Time
+                           <Label htmlFor="timeFrom" md={2}>
+                              From
                            </Label>
-                           <Col md={6}>
+                           <Col md={4}>
                               <Input
-                                 controls={["time"]}
                                  type="time"
-                                 name="time"
-                                 id="time"
+                                 interval="15 min"
+                                 name="timeFrom"
+                                 id="timeFrom"
+                                 value={timeFrom}
                                  min="9:00"
                                  max="18:00"
+                                 onChange={this.handleChange}
+                              />
+                           </Col>
+                           <Label htmlFor="timeTo" md={2}>
+                              To
+                           </Label>
+                           <Col md={4}>
+                              <Input
+                                 type="time"
+                                 name="timeTo"
+                                 id="timeTo"
+                                 value={timeTo}
+                                 int="900"
+                                 min="9:00"
+                                 max="18:00"
+                                 onChange={this.handleChange}
                               />
                            </Col>
                         </Row>
                      </FormGroup>
                      <Col>
-                        <Button type="submit" value="submit" color="secondary">
+                        <Button type="submit" value="submit" color="info">
                            Reserve Your Spot
                         </Button>
                      </Col>

@@ -7,7 +7,7 @@ const Footer = () => {
       <footer className="site-footer">
          <div className="container">
             <div className="row">
-               <div className="col-lg-4 col-md-6 mt-3">
+               <div className="col-md-6 mt-3">
                   <p>Join our mailing list for future adoption event:</p>
                   <div className="row">
                      <div className="col-lg-4 col-md-6 col-sm-12">
