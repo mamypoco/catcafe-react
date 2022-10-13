@@ -1,7 +1,14 @@
 import React, { Component } from "react";
 import cafeLogo from "../assets/cocoa_logo8.jpg";
-import { Navbar, Collapse, NavbarToggler } from "reactstrap";
-import { Link } from "react-router-dom";
+import {
+   Nav,
+   NavItem,
+   NavLink,
+   Navbar,
+   Collapse,
+   NavbarToggler,
+} from "reactstrap";
+// import { Link } from "react-router-dom";
 
 class Header extends Component {
    constructor(props) {
@@ -39,7 +46,7 @@ class Header extends Component {
                   <NavbarToggler onClick={this.toggleNav} />
                   <Collapse isOpen={this.state.isNavOpen} navbar>
                      <div className="m-auto">
-                        {/* <Nav navbar>
+                        <Nav navbar>
                            <NavItem>
                               <NavLink className="nav-link" href="/home">
                                  Home
@@ -65,8 +72,8 @@ class Header extends Component {
                                  Contact
                               </NavLink>
                            </NavItem>
-                        </Nav> */}
-                        <ul className="list-unstyled">
+                        </Nav>
+                        {/* <ul className="list-unstyled">
                            <li>
                               <Link to="/home">Home</Link>
                            </li>
@@ -82,7 +89,7 @@ class Header extends Component {
                            <li>
                               <Link to="/contactus">Contact Us</Link>
                            </li>
-                        </ul>
+                        </ul> */}
                      </div>
                   </Collapse>
                </Navbar>
