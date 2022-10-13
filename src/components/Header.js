@@ -1,13 +1,6 @@
 import React, { Component } from "react";
 import cafeLogo from "../assets/cocoa_logo8.jpg";
-import {
-   Nav,
-   Navbar,
-   NavItem,
-   NavLink,
-   Collapse,
-   NavbarToggler,
-} from "reactstrap";
+import { Navbar, Collapse, NavbarToggler } from "reactstrap";
 import { Link } from "react-router-dom";
 
 class Header extends Component {
