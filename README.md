@@ -1,5 +1,8 @@
-I used Class component and refux-form
+I used the following:
+ - Class component
+ - refux-form
 
+---------------
 
 # Getting Started with Create React App
 
