@@ -1,6 +1,6 @@
 I used the following:
- - Class component
- - refux-form
+ - class component (no hooks)
+ - redux-form
 
 ---------------
 
